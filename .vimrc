@@ -29,7 +29,6 @@ let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert) let OmniC
 " map <ctrl>+F12 to generate ctags for current folder:
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 
-map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/devel/edream6.1.1-riogrande-release<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 " TlistToggle and NERDTreeToggle shortcut
 map <C-F6> :NERDTreeToggle <CR><CR>
 map <C-F5> :TlistToggle <CR><CR>
