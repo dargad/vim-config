@@ -47,9 +47,6 @@ map <C-F9> :CCTreeLoadDB <CR><CR>
 :let Grep_Default_Filelist = '*.c *.cpp *.asm *.java *.aidl' 
 :set listchars=tab:>-,trail:-
 :set list
-:let g:ogs_app_url = 'http://opengrok.sonyericsson.net'
-:let g:ogs_project = '/jellybean/'
-:let g:ogs_browser_command = 'xdg-open'
 
 :set tags+=./tags
 :set tags+=~/.vim/tags/android
