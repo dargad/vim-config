@@ -1,4 +1,5 @@
 call pathogen#infect()
+let g:Powerline_symbols = 'fancy'
 :set number
 :syntax on
 :set mouse=a
@@ -28,7 +29,6 @@ let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert) let OmniC
 " -- ctags --
 " map <ctrl>+F12 to generate ctags for current folder:
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
-map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/devel/edream6.1.1-riogrande-release<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 " TlistToggle and NERDTreeToggle shortcut
 map <C-F6> :NERDTreeToggle <CR><CR>
 map <C-F5> :TlistToggle <CR><CR>
@@ -65,4 +65,6 @@ if has("gui_running")
   " Maximize gvim window.
   set lines=45 columns=120
 endif
+
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 
