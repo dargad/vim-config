@@ -16,6 +16,3 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/cvim-pathogen"]
-	path = bundle/cvim-pathogen
-	url = https://github.com/HenningM/cvim-pathogen.git
