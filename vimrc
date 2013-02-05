@@ -10,12 +10,22 @@ let g:Powerline_symbols = 'fancy'
 :set foldnestmax=10      "deepest fold is 10 levels
 :set nofoldenable        "dont fold by default
 :set foldlevel=1         "this is just what i use
-:set autoindent  " noautoindent
-:set tabstop=4
-:set shiftwidth=4
-:set textwidth=120
+:set autoindent smartindent
+:set backspace=eol,start,indent
 
-:set expandtab
+let kernel_dev=0
+
+if kernel_dev
+    set noexpandtab                         " use tabs, not spaces
+    set tabstop=8                           " tabstops of 8
+    set shiftwidth=8                        " indents of 8
+    set textwidth=78                        " screen in 80 columns wide, wrap at 78
+else
+    set tabstop=4
+    set shiftwidth=4
+    set textwidth=120
+    set expandtab
+endif
 
 " --- OmniCppComplete ---
 " -- required --
@@ -64,4 +74,12 @@ if has("gui_running")
 endif
 
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+
+syn match ErrorLeadSpace /^ \+/             " highlight leading spaces
+syn match ErrorTailSpace /^ \+$/            " highlight trailing spaces
+syn match Error80            /\%>80v.\+/    " highlight in red anything after 80 in line
+
+set formatoptions=tcqlron
+set cinoptions=:0,l1,t0,g0
+set foldmethod=syntax
 
