@@ -84,3 +84,18 @@ set formatoptions=tcqlron
 set cinoptions=:0,l1,t0,g0
 set foldmethod=syntax
 
+if has("cscope")
+    set csprg=/usr/bin/cscope
+    set csto=0
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+endif
+map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
