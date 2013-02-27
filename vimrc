@@ -1,17 +1,18 @@
 call pathogen#infect()
 let g:Powerline_symbols = 'fancy'
-:set number
-:syntax on
-:set mouse=a
-:colorscheme desert
-:set hlsearch
-:set autoindent
-:set foldmethod=syntax  "fold based on indent
-:set foldnestmax=10      "deepest fold is 10 levels
-:set nofoldenable        "dont fold by default
-:set foldlevel=1         "this is just what i use
-:set autoindent smartindent
-:set backspace=eol,start,indent
+set number
+syntax on
+set mouse=a
+colorscheme desert
+set hlsearch
+set autoindent
+set foldmethod=syntax  "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+set autoindent smartindent
+set backspace=eol,start,indent
+set ignorecase smartcase
 
 let kernel_dev=0
 
