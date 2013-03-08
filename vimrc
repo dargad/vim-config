@@ -1,5 +1,23 @@
 call pathogen#infect()
 let g:Powerline_symbols = 'fancy'
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-pathogen'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'klen/python-mode'
+Bundle 'Valloric/YouCompleteMe'
+
+
 set number
 syntax on
 set mouse=a
