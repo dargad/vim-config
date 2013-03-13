@@ -1,2 +1,12 @@
 tags/*
 *.swp
+FuzzyFinder
+L9
+nerdtree
+python-mode
+vim-fugitive
+vim-pathogen
+vim-powerline
+vundle
+YouCompleteMe
+syntastic

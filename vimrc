@@ -16,7 +16,9 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'klen/python-mode'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 set number
 syntax on
@@ -52,8 +54,8 @@ set nocp " non vi compatible mode
 filetype plugin on " enable plugins
 " -- optional --
 " auto close options when exiting insert mode autocmd InsertLeave * if pumvisible() == 0|pclose|endif set completeopt=menu,menuone " -- configs -- let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete with -> let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
-let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert) let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window let OmniCpp_ShowScopeInAbbr = 0
+"let OmniCpp_MayCompleteArrow = 1 " autocomplete with -> let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
+"let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert) let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window let OmniCpp_ShowScopeInAbbr = 0
 
 " -- ctags --
 "map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/<tag-file> ~/<source-dir>/<CR><CR>
