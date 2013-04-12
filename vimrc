@@ -33,6 +33,10 @@ set foldlevel=1         "this is just what i use
 set autoindent smartindent
 set backspace=eol,start,indent
 set ignorecase smartcase
+set hidden
+set colorcolumn=100
+
+:inoremap \fn <C-R>=expand("%:t")<CR>
 
 let kernel_dev=0
 
