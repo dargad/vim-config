@@ -37,6 +37,8 @@ set hidden
 set colorcolumn=100
 
 :inoremap \fn <C-R>=expand("%:t")<CR>
+nnoremap <C-A> :A<CR>
+nnoremap <C-W> :Kwbd<CR>
 
 let kernel_dev=0
 
