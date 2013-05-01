@@ -99,7 +99,7 @@ noremap <C-left> <Esc><C-W>h
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=45 columns=120
+  set lines=50 columns=160
 endif
 
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
