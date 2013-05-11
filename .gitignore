@@ -10,3 +10,4 @@ vim-powerline
 vundle
 YouCompleteMe
 syntastic
+conque-term
