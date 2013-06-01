@@ -67,6 +67,7 @@ filetype plugin on " enable plugins
 
 " -- ctags --
 "map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/<tag-file> ~/<source-dir>/<CR><CR>
+map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/android/system/<CR><CR>
 " map <ctrl>+F12 to generate ctags for current folder:
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 " TlistToggle and NERDTreeToggle shortcut
@@ -84,7 +85,8 @@ map <C-F9> :CCTreeLoadDB <CR><CR>
      let g:CCTreeKeyDepthMinus = '<C-\>-'
      let g:CCTreeWindowWidth = 40
 
-:let Grep_Default_Filelist = '*.c *.cpp *.asm *.java *.aidl' 
+":let Grep_Default_Filelist = '*.c *.cpp *.asm *.java *.aidl' 
+:let Grep_Default_Filelist = '*.c *.cpp *.h'
 :set listchars=tab:>-,trail:-
 :set list
 
