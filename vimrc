@@ -7,7 +7,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
@@ -18,8 +17,11 @@ Bundle 'klen/python-mode'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'rosenfeld/conque-term'
+Bundle 'vim-scripts/DfrankUtil'
+Bundle 'vim-scripts/vimprj'
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 
 set number
 syntax on
@@ -77,7 +79,7 @@ map <C-F10> :BufExplorer <CR>
 map <C-F9> :CCTreeLoadDB <CR><CR>
 
      let g:CCTreeKeyTraceForwardTree = '<C-p>' 
-     let g:CCTreeKeyTraceReverseTree = '<C-o>' 
+     "let g:CCTreeKeyTraceReverseTree = '<C-o>' 
      let g:CCTreeKeyHilightTree = '<C-l>'        " Static highlighting
      let g:CCTreeKeyToggleWindow = '<C-F7>' 
      let g:CCTreeKeyCompressTree = 'zs'     " Compress call-tree 
