@@ -19,6 +19,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'rosenfeld/conque-term'
 Bundle 'vim-scripts/DfrankUtil'
 Bundle 'vim-scripts/vimprj'
+Bundle 'vim-scripts/genutils'
+Bundle 'pydave/vim-perforce'
 
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -40,6 +42,7 @@ set hidden
 set colorcolumn=100
 
 :inoremap \fn <C-R>=expand("%:t")<CR>
+cabbr <expr> %% expand('%:p:h')
 nnoremap <C-A> :A<CR>
 nnoremap <C-W> :Kwbd<CR>
 nnoremap <C-J> :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -132,3 +135,5 @@ if has("cscope")
     set csverb
 endif
 map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
+
+so ~/.vim/autoload/headerguard.vim
