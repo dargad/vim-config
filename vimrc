@@ -20,12 +20,10 @@ Bundle 'rosenfeld/conque-term'
 Bundle 'vim-scripts/DfrankUtil'
 Bundle 'vim-scripts/vimprj'
 Bundle 'vim-scripts/genutils'
-"Bundle 'pydave/vim-perforce'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle 'pydave/vim-perforce'
+Bundle 'vim-scripts/UltiSnips'
 
-"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 
 set number
@@ -46,9 +44,10 @@ set colorcolumn=100
 
 :inoremap \fn <C-R>=expand("%:t")<CR>
 cabbr <expr> %% expand('%:p:h')
-nnoremap <C-A> :A<CR>
-nnoremap <C-W> :Kwbd<CR>
-nnoremap <C-J> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-a> :A<CR>
+nnoremap <C-w> :Kwbd<CR>
+nnoremap <C-S-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <C-b> :!clang++ %<CR>
 
 let kernel_dev=0
 
@@ -142,3 +141,10 @@ map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
 so ~/.vim/autoload/headerguard.vim
 :imap <C-Space> <Plug>snipMateNextOrTrigger
 :smap <C-Space> <Plug>snipMateNextOrTrigger
+
+"" YouCompleteMe
+let g:ycm_key_list_previous_completion=['<Up>']
+
+"" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsListSnippets="<c-s-tab>"
