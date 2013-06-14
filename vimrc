@@ -48,6 +48,9 @@ nnoremap <C-a> :A<CR>
 nnoremap <C-w> :Kwbd<CR>
 nnoremap <C-S-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <C-b> :!clang++ %<CR>
+" map C-H to toggle nohlsearch
+nnoremap <C-h> :set nohlsearch! nohlsearch?<CR>
+nnoremap <C-b> <Esc>:!$CXX %<CR>
 
 let kernel_dev=0
 
@@ -137,14 +140,11 @@ if has("cscope")
     set csverb
 endif
 map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
-
-so ~/.vim/autoload/headerguard.vim
-:imap <C-Space> <Plug>snipMateNextOrTrigger
-:smap <C-Space> <Plug>snipMateNextOrTrigger
-
 "" YouCompleteMe
 let g:ycm_key_list_previous_completion=['<Up>']
 
 "" Ultisnips
 let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsListSnippets="<c-s-tab>"
+" expand current workdir with %%
+cabbr <expr> %% expand('%:p:h')
