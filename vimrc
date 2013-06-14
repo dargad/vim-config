@@ -20,6 +20,10 @@ Bundle 'rosenfeld/conque-term'
 Bundle 'vim-scripts/DfrankUtil'
 Bundle 'vim-scripts/vimprj'
 Bundle 'vim-scripts/genutils'
+"Bundle 'pydave/vim-perforce'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
 
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -136,3 +140,5 @@ endif
 map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 so ~/.vim/autoload/headerguard.vim
+:imap <C-Space> <Plug>snipMateNextOrTrigger
+:smap <C-Space> <Plug>snipMateNextOrTrigger
