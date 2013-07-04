@@ -45,7 +45,6 @@ set colorcolumn=100
 cabbr <expr> %% expand('%:p:h')
 nnoremap <C-a> :A<CR>
 nnoremap <C-w> :Kwbd<CR>
-nnoremap <C-S-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " map C-H to toggle nohlsearch
 nnoremap <C-h> :set nohlsearch! nohlsearch?<CR>
 nmap <C-s> :!find -name '*.cpp' -o -name '*.h' > cscope.files<CR> :!cscope -b<CR>
@@ -139,11 +138,13 @@ if has("cscope")
     set csverb
 endif
 map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
-"" YouCompleteMe
-let g:ycm_key_list_previous_completion=['<Up>']
 
-"" Ultisnips
-let g:UltiSnipsExpandTrigger="<c-tab>"
-let g:UltiSnipsListSnippets="<c-s-tab>"
 " expand current workdir with %%
 cabbr <expr> %% expand('%:p:h')
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jf :YcmCompleter GoToDeclaration<CR>
