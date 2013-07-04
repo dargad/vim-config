@@ -46,10 +46,10 @@ cabbr <expr> %% expand('%:p:h')
 nnoremap <C-a> :A<CR>
 nnoremap <C-w> :Kwbd<CR>
 nnoremap <C-S-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <C-b> :!clang++ %<CR>
 " map C-H to toggle nohlsearch
 nnoremap <C-h> :set nohlsearch! nohlsearch?<CR>
-nnoremap <C-b> <Esc>:!$CXX %<CR>
+nmap <C-s> :!find -name '*.cpp' -o -name '*.h' > cscope.files<CR> :!cscope -b<CR>
+
 
 let kernel_dev=0
 
