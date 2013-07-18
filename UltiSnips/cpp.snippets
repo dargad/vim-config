@@ -1,0 +1,10 @@
+snippet ifndef "#ifndef ... #define ... #endif"
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif // ${1/([A-Za-z0-9_]+).*/$1/}
+endsnippet
+
+snippet ifdef "#ifdef ... #endif"
+#ifdef ${1:SYMBOL}
+#endif // ${1/([A-Za-z0-9_]+).*/$1/}
+endsnippet
