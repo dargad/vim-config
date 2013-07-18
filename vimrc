@@ -21,6 +21,7 @@ Bundle 'vim-scripts/DfrankUtil'
 Bundle 'vim-scripts/vimprj'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/UltiSnips'
+Bundle 'dimasg/vim-mark'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -142,9 +143,9 @@ map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
 " expand current workdir with %%
 cabbr <expr> %% expand('%:p:h')
 
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>jf :YcmCompleter GoToDeclaration<CR>
