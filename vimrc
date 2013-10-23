@@ -45,7 +45,7 @@ set colorcolumn=100
 
 :inoremap \fn <C-R>=expand("%:t")<CR>
 cabbr <expr> %% expand('%:p:h')
-nnoremap <C-a> :A<CR>
+"nnoremap <C-a> :A<CR>
 nnoremap <C-w> :Kwbd<CR>
 " map C-H to toggle nohlsearch
 nnoremap <C-h> :set nohlsearch! nohlsearch?<CR>
