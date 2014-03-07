@@ -23,6 +23,7 @@ Bundle 'vim-scripts/vimprj'
 Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/UltiSnips'
 Bundle 'dimasg/vim-mark'
+Bundle 'jdonaldson/vaxe'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -101,7 +102,6 @@ map <C-F9> :CCTreeLoadDB <CR><CR>
 :set list
 
 :set tags+=./tags
-:set tags+=~/.vim/tags/android
 
 noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
 noremap <c-s-down> ddp
@@ -115,7 +115,7 @@ if has("gui_running")
   set lines=50 columns=160
 endif
 
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
 
 syn match ErrorLeadSpace /^ \+/             " highlight leading spaces
 syn match ErrorTailSpace /^ \+$/            " highlight trailing spaces
@@ -150,3 +150,13 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>jf :YcmCompleter GoToDeclaration<CR>
+
+function! StripTrailingWhitespace()
+    normal mZ
+    let l:chars = col("$")
+    %s/\s\+$//e
+    if (line("'Z") != line(".")) || (l:chars != col("$"))
+        echo "Trailing whitespace stripped\n"
+    endif
+    normal `Z
+endfunction
