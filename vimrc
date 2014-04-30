@@ -24,6 +24,7 @@ Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/UltiSnips'
 Bundle 'dimasg/vim-mark'
 Bundle 'jdonaldson/vaxe'
+Bundle 'honza/vim-snippets'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -115,7 +116,7 @@ if has("gui_running")
   set lines=50 columns=160
 endif
 
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 
 syn match ErrorLeadSpace /^ \+/             " highlight leading spaces
 syn match ErrorTailSpace /^ \+$/            " highlight trailing spaces
