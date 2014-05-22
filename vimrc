@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
@@ -24,10 +24,11 @@ Bundle 'vim-scripts/genutils'
 Bundle 'vim-scripts/UltiSnips'
 Bundle 'dimasg/vim-mark'
 Bundle 'jdonaldson/vaxe'
-Bundle 'honza/vim-snippets'
+Bundle 'majutsushi/tagbar'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 set number
 syntax on
@@ -82,9 +83,9 @@ filetype plugin on " enable plugins
 map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/android/system/<CR><CR>
 " map <ctrl>+F12 to generate ctags for current folder:
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
-" TlistToggle and NERDTreeToggle shortcut
+" Tagbar and NERDTreeToggle shortcut
 map <C-F6> :NERDTreeToggle <CR><CR>
-map <C-F5> :TlistToggle <CR><CR>
+map <C-F5> :Tagbar<CR><CR>
 map <C-F10> :BufExplorer <CR>
 map <C-F9> :CCTreeLoadDB <CR><CR>
 
