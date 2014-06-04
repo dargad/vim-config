@@ -21,12 +21,13 @@ Bundle 'rosenfeld/conque-term'
 Bundle 'vim-scripts/DfrankUtil'
 Bundle 'vim-scripts/vimprj'
 Bundle 'vim-scripts/genutils'
-Bundle 'vim-scripts/UltiSnips'
+Bundle 'SirVer/UltiSnips'
+Bundle 'honza/vim-snippets'
 Bundle 'dimasg/vim-mark'
 Bundle 'jdonaldson/vaxe'
 Bundle 'majutsushi/tagbar'
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
