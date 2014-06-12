@@ -50,7 +50,7 @@ set colorcolumn=100
 :inoremap \fn <C-R>=expand("%:t")<CR>
 cabbr <expr> %% expand('%:p:h')
 "nnoremap <C-a> :A<CR>
-nnoremap <C-w> :Kwbd<CR>
+nnoremap <C-b> :Kwbd<CR>
 " map C-H to toggle nohlsearch
 nnoremap <C-h> :set nohlsearch! nohlsearch?<CR>
 nmap <C-s> :!find -name '*.cpp' -o -name '*.h' > cscope.files<CR> :!cscope -b<CR>
@@ -111,11 +111,15 @@ noremap <c-s-down> ddp
 
 noremap <C-right> <Esc><C-W>l
 noremap <C-left> <Esc><C-W>h
+noremap <C-up> <Esc><C-W>k
+noremap <C-down> <Esc><C-W>j
 
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=50 columns=160
+  map  <silent>  <S-Insert>  "+p
+  imap <silent>  <S-Insert>  <Esc>"+pa
 endif
 
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
