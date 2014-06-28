@@ -26,6 +26,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'dimasg/vim-mark'
 Bundle 'jdonaldson/vaxe'
 Bundle 'majutsushi/tagbar'
+Bundle 'hari-rangarajan/CCTree'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -90,17 +91,17 @@ map <C-F5> :Tagbar<CR><CR>
 map <C-F10> :BufExplorer <CR>
 map <C-F9> :CCTreeLoadDB <CR><CR>
 
-     let g:CCTreeKeyTraceForwardTree = '<C-p>' 
-     "let g:CCTreeKeyTraceReverseTree = '<C-o>' 
-     let g:CCTreeKeyHilightTree = '<C-l>'        " Static highlighting
-     let g:CCTreeKeyToggleWindow = '<C-F7>' 
-     let g:CCTreeKeyCompressTree = 'zs'     " Compress call-tree 
-     let g:CCTreeKeyDepthPlus = '<C-\>=' 
-     let g:CCTreeKeyDepthMinus = '<C-\>-'
-     let g:CCTreeWindowWidth = 40
+"let g:CCTreeKeyTraceForwardTree = '<C-p>' 
+""let g:CCTreeKeyTraceReverseTree = '<C-o>' 
+"let g:CCTreeKeyHilightTree = '<C-l>'        " Static highlighting
+"let g:CCTreeKeyToggleWindow = '<C-F7>' 
+"let g:CCTreeKeyCompressTree = 'zs'     " Compress call-tree 
+"let g:CCTreeKeyDepthPlus = '<C-\>=' 
+"let g:CCTreeKeyDepthMinus = '<C-\>-'
+let g:CCTreeWindowWidth = 40
 
 ":let Grep_Default_Filelist = '*.c *.cpp *.asm *.java *.aidl' 
-:let Grep_Default_Filelist = '*.c *.cpp *.h'
+:let Grep_Default_Filelist = '*.c *.cpp *.h *.hpp'
 :set listchars=tab:>-,trail:-
 :set list
 
@@ -146,7 +147,7 @@ if has("cscope")
     endif
     set csverb
 endif
-map <C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
+map <C-\><Space> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 " expand current workdir with %%
 cabbr <expr> %% expand('%:p:h')
