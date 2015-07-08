@@ -27,6 +27,7 @@ Bundle 'dimasg/vim-mark'
 Bundle 'jdonaldson/vaxe'
 Bundle 'majutsushi/tagbar'
 Bundle 'hari-rangarajan/CCTree'
+Bundle 'peterhoeg/vim-qml'
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -46,7 +47,7 @@ set autoindent smartindent
 set backspace=eol,start,indent
 set ignorecase smartcase
 set hidden
-set colorcolumn=100
+set colorcolumn=80
 
 :inoremap \fn <C-R>=expand("%:t")<CR>
 cabbr <expr> %% expand('%:p:h')
@@ -84,7 +85,7 @@ filetype plugin on " enable plugins
 "map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/<tag-file> ~/<source-dir>/<CR><CR>
 map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/android/system/<CR><CR>
 " map <ctrl>+F12 to generate ctags for current folder:
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out --exclude=.pc .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 " Tagbar and NERDTreeToggle shortcut
 map <C-F6> :NERDTreeToggle <CR><CR>
 map <C-F5> :Tagbar<CR><CR>
