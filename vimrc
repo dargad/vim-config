@@ -86,7 +86,7 @@ filetype plugin on " enable plugins
 "map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/<tag-file> ~/<source-dir>/<CR><CR>
 map <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out -f ~/.vim/tags/android ~/android/system/<CR><CR>
 " map <ctrl>+F12 to generate ctags for current folder:
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out --exclude=.pc .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --extra=+f --exclude=prebuilt* --exclude=docs --exclude=out --exclude=.pc --exclude=*.js .<CR><CR> " add current directory's generated tags file to available tags set tags+=./tags
 " Tagbar and NERDTreeToggle shortcut
 map <C-F6> :NERDTreeToggle <CR><CR>
 map <C-F5> :Tagbar<CR><CR>
@@ -123,9 +123,10 @@ if has("gui_running")
   set lines=50 columns=160
   map  <silent>  <S-Insert>  "+p
   imap <silent>  <S-Insert>  <Esc>"+pa
+  set guioptions-=T
 endif
 
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
 
 syn match ErrorLeadSpace /^ \+/             " highlight leading spaces
 syn match ErrorTailSpace /^ \+$/            " highlight trailing spaces
