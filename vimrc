@@ -1,43 +1,53 @@
 call pathogen#infect()
 let g:Powerline_symbols = 'fancy'
 set nocompatible
+
 filetype off
 
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Lokaltog/powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-pathogen'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'klen/python-mode'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'rosenfeld/conque-term'
+Plugin 'vim-scripts/DfrankUtil'
+Plugin 'vim-scripts/vimprj'
+Plugin 'vim-scripts/genutils'
+Plugin 'SirVer/UltiSnips'
+Plugin 'honza/vim-snippets'
+Plugin 'dimasg/vim-mark'
+Plugin 'jdonaldson/vaxe'
+Plugin 'majutsushi/tagbar'
+Plugin 'hari-rangarajan/CCTree'
+Plugin 'peterhoeg/vim-qml'
+Plugin 'tpope/vim-surround'
+Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
+Plugin 'KSP-KOS/EditorTools', {'rtp': 'VIM/vim-kerboscript'}
+call vundle#end()
 
-Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-pathogen'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'klen/python-mode'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'rosenfeld/conque-term'
-Bundle 'vim-scripts/DfrankUtil'
-Bundle 'vim-scripts/vimprj'
-Bundle 'vim-scripts/genutils'
-Bundle 'SirVer/UltiSnips'
-Bundle 'honza/vim-snippets'
-Bundle 'dimasg/vim-mark'
-Bundle 'jdonaldson/vaxe'
-Bundle 'majutsushi/tagbar'
-Bundle 'hari-rangarajan/CCTree'
-Bundle 'peterhoeg/vim-qml'
+" -- required --
+set nocp " non vi compatible mode
+filetype plugin indent on " enable plugins
+set number
+syntax on
 
 let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-set number
-syntax on
 set mouse=a
-colorscheme desert
+colorscheme lucius
+set incsearch
 set hlsearch
 set autoindent
 set foldmethod=syntax  "fold based on indent
@@ -74,9 +84,6 @@ else
 endif
 
 " --- OmniCppComplete ---
-" -- required --
-set nocp " non vi compatible mode
-filetype plugin on " enable plugins
 " -- optional --
 " auto close options when exiting insert mode autocmd InsertLeave * if pumvisible() == 0|pclose|endif set completeopt=menu,menuone " -- configs -- let OmniCpp_MayCompleteDot = 1 " autocomplete with .
 "let OmniCpp_MayCompleteArrow = 1 " autocomplete with -> let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
@@ -123,7 +130,8 @@ if has("gui_running")
   set lines=50 columns=160
   map  <silent>  <S-Insert>  "+p
   imap <silent>  <S-Insert>  <Esc>"+pa
-  set guioptions-=T
+  set guioptions-=m " remove menu
+  set guioptions-=T " remove toolbar
 endif
 
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
@@ -173,3 +181,9 @@ function! StripTrailingWhitespace()
 endfunction
 
 let g:pymode_rope_completion = 0
+
+set path+=**
+set wildmenu
+
+set backupdir=~/.vim/backups//
+set directory=~/.vim/backups//
