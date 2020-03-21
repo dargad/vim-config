@@ -4,6 +4,11 @@ set nocompatible
 
 filetype off
 
+if has('python3')
+  silent! python3 1
+endif
+
+
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
