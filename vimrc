@@ -139,7 +139,7 @@ if has("gui_running")
   set guioptions-=T " remove toolbar
 endif
 
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 11
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 13
 
 syn match ErrorLeadSpace /^ \+/             " highlight leading spaces
 syn match ErrorTailSpace /^ \+$/            " highlight trailing spaces
@@ -174,6 +174,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>jf :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
 
 function! StripTrailingWhitespace()
     normal mZ
